@@ -10,7 +10,14 @@ html {
   font-family: "Lato", "Courier New", Courier, monospace;
 }
 
-header {
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+#menu-small {
   padding-top: 20px;
 }
 
@@ -24,6 +31,8 @@ ul {
   align-items: center;
   justify-content: center;
   height: 100%;
+  font-family: "Roboto", "Lato", "Courier New", Courier, monospace;
+  font-weight: bold;
 }
 
 ul li {
@@ -33,6 +42,7 @@ ul li {
 ul li a {
   text-decoration: none;
   color: inherit;
+  text-transform: uppercase;
 }
 
 ul li a:hover {
@@ -53,4 +63,162 @@ ul li a:hover {
 
 .social-icons {
   color: red;
+}
+
+.social-icons img {
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  opacity: 0.7;
+}
+
+.social-icons img:nth-child(1) {
+  width: 50px;
+}
+
+.social-icons img:nth-child(2) {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.social-icons img:nth-child(3) {
+  width: 35px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 60px 30px 60px; */
+  background-color: #333;
+  margin: 30px 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gallery img:hover {
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+footer {
+  display: flex;
+}
+
+.about,
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 20px 0 40px 0;
+  width: 50%;
+}
+
+.contact {
+  padding-left: 20px;
+}
+
+.about h3,
+.contact h3 {
+  font-family: "Roboto", "Lato", "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 10px;
+}
+
+.about p,
+.contact p {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.3rem;
+}
+
+/* 
+MEDIAS QUERIES
+*/
+
+@media screen and (max-width: 760px) {
+  .gallery,
+  footer {
+    padding: 0 60px;
+  }
+
+  hr {
+    margin: 0 60px;
+  }
+
+  .gallery {
+    background-color: #fff;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .about,
+  .contact {
+    padding: 0;
+    width: 100%;
+  }
+
+  .contact {
+    padding-bottom: 50px;
+  }
+}
+
+#menu-large {
+  display: none;
+}
+
+@media screen and (min-width: 1120px) {
+  #menu-small {
+    display: none;
+  }
+
+  .main {
+    display: flex;
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .container {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  #menu-large {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    float: right;
+    position: fixed;
+    width: 55%;
+    top: 30%;
+    left: 0;
+  }
+
+  #menu-large nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 40px;
+  }
+
+  #menu-large nav ul li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo-large img {
+    width: 200px;
+  }
 }

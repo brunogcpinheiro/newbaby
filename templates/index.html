@@ -3,5 +3,39 @@
 {% block title %} NewBaby Fotografia {% endblock title %}
 
 {% block body %}
-<h1>Primeira página!</h1>
+<div class="gallery">
+  {% load static %}
+  <a>
+    <img src="{% static 'images/www/pregnant2.jpg' %}" alt="Ensaio Gestante" />
+  </a>
+  <a>
+    <img src="{% static 'images/www/baby1.jpg' %}" alt="Ensaio Newborn" />
+  </a>
+  <a>
+    <img src="{% static 'images/www/party1.jpg' %}" alt="Festa infantil" />
+  </a>
+  <a>
+    <img src="{% static 'images/www/pregnant1.jpg' %}" alt="Ensaio Gestante" />
+  </a>
+  <a>
+    <img src="{% static 'images/www/baby2.jpg' %}" alt="Ensaio Newborn" />
+  </a>
+</div>
+
+<hr />
+
+<footer>
+  <div class="about">
+    <h3>Sobre Mim</h3>
+    <p>Eu sou Renata Pinheiro, fotógrafa certificada com 5 (cinco) anos de experiência.
+      Especializada em ensaios infantis.
+    </p>
+  </div>
+  <div class="contact"> 
+    <h3>Entre em contato</h3>
+    <p>Telefone: (34) 99145-0828</p>
+    <p>Email: newbabyfoto@gmail.com</p>
+    <p>Localização: Uberaba/MG</p>
+  </div>
+</footer>
 {% endblock body %}
