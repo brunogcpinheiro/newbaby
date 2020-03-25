@@ -20,13 +20,15 @@
         <nav>
           <ul>
             <li>
-              <a href="">Home</a>
+              <a href="#">Home</a>
             </li>
             <li>
               <a href="">Galeria</a>
             </li>
             <li>
-              <a href="">Sobre mim</a>
+              <a href="{% url 'about' %}">
+                Sobre mim
+              </a>
             </li>
           </ul>
         </nav>
@@ -43,13 +45,13 @@
         <nav>
           <ul>
             <li>
-              <a href="">Home</a>
+              <a href="{% url 'index' %}">Home</a>
             </li>
             <li>
               <a href="">Galeria</a>
             </li>
             <li>
-              <a href="">Sobre mim</a>
+              <a href="{% url 'about' %}">Sobre mim</a>
             </li>
           </ul>
         </nav>
