@@ -140,6 +140,26 @@ footer {
   line-height: 1.3rem;
 }
 
+.photographer {
+  padding: 20px 20px 20px 0;
+}
+
+.photographer > img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.about-me,
+.about-me h2,
+.about-me p + p {
+  padding: 20px 0;
+}
+
+.about-me p {
+  line-height: 1.4rem;
+}
+
 /* 
 MEDIAS QUERIES
 */
