@@ -4,10 +4,10 @@ from django.db import models
 
 
 class Photo(models.Model):
-    title = models.CharField(max_length=64)
-    parents = models.CharField(max_length=100)
-    category = models.CharField(max_length=64)
-    claps = models.IntegerField(default=0)
+    titulo = models.CharField(max_length=64)
+    responsaveis = models.CharField(max_length=100)
+    categoria = models.CharField(max_length=64)
+    palmas = models.IntegerField(default=0)
 
     def __str__(self):
-        return f"{self.title} - {self.parents}"
+        return f"{self.titulo} - {self.responsaveis}"
