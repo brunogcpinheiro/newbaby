@@ -160,6 +160,15 @@ footer {
   line-height: 1.4rem;
 }
 
+.card {
+  width: 200px;
+}
+
+.categories .card img {
+  width: 100px;
+  display: block;
+}
+
 /* 
 MEDIAS QUERIES
 */
