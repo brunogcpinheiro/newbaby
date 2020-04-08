@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/photos/styles.css' %}" />
+    <title>{% block title %}{% endblock title %}</title>
+  </head>
+  <body>
+    <header id="menu-small">
+      <div class="logo">
+        <img src="{% static 'images/www/logo.png' %}" alt="Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="{% url 'index' %}">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'photos:index' %}">Galeria</a>
+          </li>
+          <li>
+            <a href="{% url 'about' %}">
+              Sobre mim
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="social-icons">
+        <img src="{% static 'images/www/instagram.png' %}" alt="Intagram" />
+        <img src="{% static 'images/www/whatsapp.png' %}" alt="Whatsapp" />
+        <img src="{% static 'images/www/facebook.png' %}" alt="Facebook" />
+      </div>
+    </header>
+    {% block body %}{% endblock body %}
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "layout-galeria.html" %}
+
+{% block title %}Newbaby | Ensaio Gestante{%endblock title %}
+
+{% block body %}
+<ul>
+  {% for photo in pregnant_photos %}
+  <li>{{ photo }}</li>
+  {% endfor %}
+</ul>
+{% endblock body %}
