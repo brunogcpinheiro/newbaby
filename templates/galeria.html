@@ -1,0 +1,35 @@
+{% extends "layout.html" %} {% load static %} {% block title %} Newbaby |
+Galeria {% endblock title %} {% block body %}
+<div class="categories">
+  <div class="card">
+    <a href="{% url 'photos:gestante' %}">
+      <img src="{% static 'images/www/pregnant1.jpg' %}" alt="Gestante" />
+      <h3>Ensaio Gestante</h3>
+    </a>
+  </div>
+  <div class="card">
+    <a href="{% url 'photos:newborn' %}">
+      <img src="{% static 'images/www/newborn1.jpg' %}" alt="Newborn" />
+      <h3>Ensaio Newborn</h3>
+    </a>
+  </div>
+  <div class="card">
+    <a>
+      <img src="{% static 'images/www/party1.jpg' %}" alt="Festa infantil" />
+      <h3>Festa infantil</h3>
+    </a>
+  </div>
+  <div class="card">
+    <a>
+      <img src="{% static 'images/www/baby2.jpg' %}" alt="Acompanhamento" />
+      <h3>Acompanhamento</h3>
+    </a>
+  </div>
+  <div class="card">
+    <a>
+      <img src="{% static 'images/www/born.jpg' %}" alt="Parto" />
+      <h3>Parto</h3>
+    </a>
+  </div>
+</div>
+{% endblock body %}

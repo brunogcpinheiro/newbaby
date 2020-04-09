@@ -5,19 +5,19 @@
 {% block body %}
 <div class="gallery">
   {% load static %}
-  <a>
+  <a href="{% url 'photos:index' %}">
     <img src="{% static 'images/www/pregnant2.jpg' %}" alt="Ensaio Gestante" />
   </a>
-  <a>
+  <a href="{% url 'photos:index' %}">
     <img src="{% static 'images/www/baby1.jpg' %}" alt="Ensaio Newborn" />
   </a>
-  <a>
+  <a href="{% url 'photos:index' %}">
     <img src="{% static 'images/www/party1.jpg' %}" alt="Festa infantil" />
   </a>
-  <a>
+  <a href="{% url 'photos:index' %}">
     <img src="{% static 'images/www/pregnant1.jpg' %}" alt="Ensaio Gestante" />
   </a>
-  <a>
+  <a href="{% url 'photos:index' %}">
     <img src="{% static 'images/www/baby2.jpg' %}" alt="Ensaio Newborn" />
   </a>
 </div>
