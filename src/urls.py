@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 from .views import index, about
 
@@ -24,4 +26,4 @@ urlpatterns = [
     path('', index, name="index"),
     path('sobre-mim/', about, name="about"),
     path('galeria/', include("photos.urls"))
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

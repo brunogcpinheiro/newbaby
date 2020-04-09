@@ -4,12 +4,14 @@
 
 {% block body %}
 <div class="cards">
-  {% for photo in newborn_photos %}
-    <div class="card">
-      <img src="{{ photo.imagem }}" alt="{{ photo.titulo }}" />
-      <h3>{{ photo.titulo }}</h3>
-      <p>Responsáveis: {{ photo.responsaveis }}</p>
-    </div>
-  {% endfor %}
+	{% for photo in newborn_photos %}
+	<div class="card">
+		<img src="{{ photo.imagem.url }}" alt="{{ photo.titulo }}" />
+		<h3>{{ photo.titulo }}</h3>
+		<p><strong>Responsáveis:</strong> {{ photo.responsaveis }}</p>
+	</div>
+	{% empty %}
+	<h3>Sem fotos no momento.</h3>
+	{% endfor %}
 </div>
 {% endblock body %}

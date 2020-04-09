@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, reverse
 
 from .models import Photo, Category
 
@@ -20,4 +21,28 @@ def gestante(request):
 def newborn(request):
     return render(request, "newborn.html", {
         "newborn_photos": Photo.objects.filter(categoria__nome__startswith="Newborn")
+    })
+
+
+def acompanhamento(request):
+    return render(request, "acompanhamento.html", {
+        "support_photos": Photo.objects.filter(categoria__nome__startswith="Acompanhamento")
+    })
+
+
+def festa(request):
+    return render(request, "festa.html", {
+        "party_photos": Photo.objects.filter(categoria__nome__startswith="Festa infantil")
+    })
+
+
+def parto(request):
+    return render(request, "parto.html", {
+        "born_photos": Photo.objects.filter(categoria__nome__startswith="Parto")
+    })
+
+
+def outros(request):
+    return render(request, "outros.html", {
+        "other_photos": Photo.objects.filter(categoria__nome__startswith="Outros")
     })

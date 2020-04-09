@@ -1,7 +1,10 @@
-{% extends "layout-galeria.html" %} {% load static %} {% block title %}Newbaby | Ensaio
-Gestante{%endblock title %} {% block body %}
+{% extends "layout-galeria.html" %}
+
+{% block title %}Newbaby | Outros{%endblock title %}
+
+{% block body %}
 <div class="cards">
-	{% for photo in pregnant_photos %}
+	{% for photo in other_photos %}
 	<div class="card">
 		<img src="{{ photo.imagem.url }}" alt="{{ photo.titulo }}" />
 		<h3>{{ photo.titulo }}</h3>

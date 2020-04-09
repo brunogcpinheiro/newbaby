@@ -1,42 +1,42 @@
 {% extends 'layout.html' %}
 
-{% block title %} NewBaby | Home {% endblock title %} 
+{% block title %} NewBaby | Home {% endblock title %}
 
 {% block body %}
 <div class="gallery">
-  {% load static %}
-  <a href="{% url 'photos:index' %}">
-    <img src="{% static 'images/www/pregnant2.jpg' %}" alt="Ensaio Gestante" />
+	{% load static %}
+	<a href="{% url 'photos:index' %}">
+		<img src="{% static 'images/www/pregnant2.jpg' %}" alt="Ensaio Gestante" />
   </a>
-  <a href="{% url 'photos:index' %}">
-    <img src="{% static 'images/www/baby1.jpg' %}" alt="Ensaio Newborn" />
+		<a href="{% url 'photos:index' %}">
+			<img src="{% static 'images/www/baby1.jpg' %}" alt="Ensaio Newborn" />
   </a>
-  <a href="{% url 'photos:index' %}">
-    <img src="{% static 'images/www/party1.jpg' %}" alt="Festa infantil" />
+			<a href="{% url 'photos:index' %}">
+				<img src="{% static 'images/www/party1.jpg' %}" alt="Festa infantil" />
   </a>
-  <a href="{% url 'photos:index' %}">
-    <img src="{% static 'images/www/pregnant1.jpg' %}" alt="Ensaio Gestante" />
+				<a href="{% url 'photos:index' %}">
+					<img src="{% static 'images/www/pregnant1.jpg' %}" alt="Ensaio Gestante" />
   </a>
-  <a href="{% url 'photos:index' %}">
-    <img src="{% static 'images/www/baby2.jpg' %}" alt="Ensaio Newborn" />
+					<a href="{% url 'photos:index' %}">
+						<img src="{% static 'images/www/baby2.jpg' %}" alt="Ensaio Newborn" />
   </a>
 </div>
 
 <hr />
 
 <footer>
-  <div class="about">
-    <h3>Sobre Mim</h3>
-    <p>
-      Eu sou Renata Pinheiro, fotógrafa certificada com 5 (cinco) anos de
-      experiência. Especializada em ensaios infantis.
-    </p>
-  </div>
-  <div class="contact">
-    <h3>Entre em contato</h3>
-    <p>Telefone: (34) 99145-0828</p>
-    <p>Email: newbabyfoto@gmail.com</p>
-    <p>Localização: Uberaba/MG</p>
-  </div>
+	<div class="about">
+		<h3>Sobre Mim</h3>
+		<p>
+			Eu sou Renata Pinheiro, fotógrafa certificada com 5 (cinco) anos de
+			experiência. Especializada em ensaios infantis.
+		</p>
+	</div>
+	<div class="contact">
+		<h3>Entre em contato</h3>
+		<p>Telefone: (34) 99145-0828</p>
+		<p>Email: newbabyfoto@gmail.com</p>
+		<p>Localização: Uberaba/MG</p>
+	</div>
 </footer>
 {% endblock body %}
