@@ -1,8 +1,15 @@
-{% extends "layout-galeria.html" %} {% block title %}Newbaby | Ensaio
-Gestante{%endblock title %} {% block body %}
-<ul>
+{% extends "layout-galeria.html" %}
+
+{% block title %}Newbaby | Ensaio Newborn{%endblock title %}
+
+{% block body %}
+<div class="cards">
   {% for photo in newborn_photos %}
-  <li>{{ photo }}</li>
+    <div class="card">
+      <img src="{{ photo.imagem }}" alt="{{ photo.titulo }}" />
+      <h3>{{ photo.titulo }}</h3>
+      <p>Responsáveis: {{ photo.responsaveis }}</p>
+    </div>
   {% endfor %}
-</ul>
+</div>
 {% endblock body %}
