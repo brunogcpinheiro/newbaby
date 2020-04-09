@@ -16,7 +16,7 @@ class Photo(models.Model):
     categoria = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name="categories")
     palmas = models.IntegerField(default=0)
-    imagem = models.ImageField(blank=True)
+    imagem = models.ImageField(upload_to="uploads/%Y/%m/%d")
 
     def __str__(self):
         return f"{self.titulo} - {self.responsaveis}"
