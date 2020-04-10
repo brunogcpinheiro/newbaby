@@ -19,3 +19,7 @@ class Photo(models.Model):
 
     def __str__(self):
         return f"{self.titulo} - {self.responsaveis}"
+
+    def delete(self, *args, **kwargs):
+        self.imagem.delete()
+        super().delete(*args, **kwargs)

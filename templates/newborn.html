@@ -1,17 +1,18 @@
 {% extends "layout-galeria.html" %}
-
 {% block title %}Newbaby | Ensaio Newborn{%endblock title %}
-
 {% block body %}
 <div class="cards">
-	{% for photo in newborn_photos %}
-	<div class="card">
-		<img src="{{ photo.imagem.url }}" alt="{{ photo.titulo }}" />
-		<h3>{{ photo.titulo }}</h3>
-		<p><strong>Responsáveis:</strong> {{ photo.responsaveis }}</p>
-	</div>
-	{% empty %}
-	<h3>Sem fotos no momento.</h3>
-	{% endfor %}
+  {% for photo in newborn_photos %}
+  <div class="card">
+    <img src="{{ photo.imagem.url }}" alt="{{ photo.titulo }}" />
+    <h3>{{ photo.titulo }}</h3>
+    <p>
+      <strong>Responsáveis:</strong>
+      {{ photo.responsaveis }}
+    </p>
+  </div>
+  {% empty %}
+  <h3>Sem fotos no momento.</h3>
+  {% endfor %}
 </div>
 {% endblock body %}
