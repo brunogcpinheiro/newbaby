@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, reverse
 
-from .models import Photo, Category
+from .models import Foto, Categoria
 
 # Create your views here.
 
@@ -14,35 +14,35 @@ def index(request):
 
 def gestante(request):
     return render(request, "gestante.html", {
-        "pregnant_photos": Photo.objects.filter(categoria__nome__startswith="Gestante")
+        "pregnant_photos": Foto.objects.filter(categoria__nome__startswith="Gestante")
     })
 
 
 def newborn(request):
     return render(request, "newborn.html", {
-        "newborn_photos": Photo.objects.filter(categoria__nome__startswith="Newborn")
+        "newborn_photos": Foto.objects.filter(categoria__nome__startswith="Newborn")
     })
 
 
 def acompanhamento(request):
     return render(request, "acompanhamento.html", {
-        "support_photos": Photo.objects.filter(categoria__nome__startswith="Acompanhamento")
+        "support_photos": Foto.objects.filter(categoria__nome__startswith="Acompanhamento")
     })
 
 
 def festa(request):
     return render(request, "festa.html", {
-        "party_photos": Photo.objects.filter(categoria__nome__startswith="Festa infantil")
+        "party_photos": Foto.objects.filter(categoria__nome__startswith="Festa infantil")
     })
 
 
 def parto(request):
     return render(request, "parto.html", {
-        "born_photos": Photo.objects.filter(categoria__nome__startswith="Parto")
+        "born_photos": Foto.objects.filter(categoria__nome__startswith="Parto")
     })
 
 
 def outros(request):
     return render(request, "outros.html", {
-        "other_photos": Photo.objects.filter(categoria__nome__startswith="Outros")
+        "other_photos": Foto.objects.filter(categoria__nome__startswith="Outros")
     })
